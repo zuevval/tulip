@@ -36,10 +36,11 @@ def main():
 
     for vertical_offset, line in enumerate(lines):
         for horisontal_offset, char in enumerate(line):
-            if char == AppConsts.comment_symbol:
+            if char == AppConsts.space_symbol:
                 continue
             commit_day = first_day + datetime.timedelta(horisontal_offset * AppConsts.days_in_week + vertical_offset)
-            commit_at(commit_day)
+            for _ in range(int(char)):
+                commit_at(commit_day)
 
 
 if __name__ == "__main__":

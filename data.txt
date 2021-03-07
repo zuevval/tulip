@@ -1,6 +1,6 @@
 # write your image here in the 45 * 7 grid below
 # lines starting with `#` are ignored
-
+#
 #Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec
 #                                                 >|< end
 1
