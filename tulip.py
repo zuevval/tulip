@@ -29,7 +29,7 @@ def main():
     parser.add_argument('--year', type=int, default=2019, help='a year to commit the picture')
     args = parser.parse_args()
     with open("data.txt") as data_file:
-        lines = [line.strip() for line in data_file.readlines() if len(line) and line[0] != AppConsts.comment_symbol]
+        lines = [line.rstrip("\n") for line in data_file.readlines() if len(line) and line[0] != AppConsts.comment_symbol]
     lines = lines[:min(AppConsts.days_in_week, len(lines))]
 
     first_day = first_sunday(args.year)
