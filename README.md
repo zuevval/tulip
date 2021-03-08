@@ -5,7 +5,7 @@ Pseudo-graphics for your `Contributions` graph
 
 ## Requirements
 
-Python 3.6+
+Python 3.5+
 
 ## Usage
 Suppose there is an empty space on your `Cotributions` timeline:
@@ -23,7 +23,7 @@ To achieve this, follow the steps below.
 4. Modify `data.txt` so that it contains your image. The number corresponds to the color intensity. You may pick a template from the `examples` folder.
 5. `python3 tulip.py --year [desired year]`, e. g. `python3 tulip.py --year 2016`
 6. `git remote add impl [your-repository-url]`, e. g. `git remote add impl https://github.com/your-name/tulip-impl.git`
-7. `git push`
+7. `git push impl`
 
 Now you should see the image on your profile!
 
