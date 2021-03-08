@@ -15,11 +15,11 @@ def first_sunday(year: int) -> datetime.date:
     return next_sunday
 
 
-def commit_at(date: datetime.date) -> int:
+def commit_on(date: datetime.date) -> int:
     with open(".tulip", "a") as tulip_file:
         tulip_file.write(" ")
     ret_code = subprocess.run(["git", "add", ".tulip"]).returncode
-    ret_code &= subprocess.run(
+    ret_code |= subprocess.run(
         ["git", "commit", "-m", "tulip automatic commit", "--date", date.strftime("%b %d %Y")]).returncode
     return ret_code
 
@@ -40,7 +40,7 @@ def main():
                 continue
             commit_day = first_day + datetime.timedelta(horisontal_offset * AppConsts.days_in_week + vertical_offset)
             for _ in range(int(char)):
-                commit_at(commit_day)
+                commit_on(commit_day)
 
 
 if __name__ == "__main__":

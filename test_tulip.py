@@ -1,4 +1,4 @@
-from tulip import first_sunday, commit_at
+from tulip import first_sunday, commit_on
 
 
 def test_first_monday():
@@ -10,5 +10,5 @@ def test_first_monday():
     assert m.day == 3
 
 
-def test_commit_at():
-    assert commit_at(date=first_sunday(2019)) == 0
+def test_commit_on():
+    assert commit_on(date=first_sunday(2019)) == 0
